@@ -11,7 +11,7 @@ Save your body of text to the [corpus.txt](corpus.txt) file, or feel free to use
 
 Open [params.py](params.py) and configure your connection to Atlas, along with the name of the database and collection you'd like to store your text. 
 ### Encode your text
-Install the Sentence Transformers model
+Install the Sentence Transformers model:
 ```zsh
 pip install -U sentence-transformers
 ```
@@ -67,7 +67,7 @@ This is the simple query passed to MongoDB:
             "knnBeta": {
                 "vector": <geneated query vector>,
                 "path": "docVector",
-                "k": 150   // Number of neareast neighbors (nn) to return 
+                "k": 150   /* Number of neareast neighbors (nn) to return */
             }
         }
     },
