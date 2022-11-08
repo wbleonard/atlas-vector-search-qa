@@ -16,7 +16,7 @@ Install the Sentence Transformers model
 pip install -U sentence-transformers
 ```
 
-Run the [encoder](encoder.py), which will store the sentences along with their dense vectors to MongoDB. 
+Run the [encoder](encode.py), which will store the sentences along with their dense vectors to MongoDB. 
 ```python
 python3 encode.py
 ```
