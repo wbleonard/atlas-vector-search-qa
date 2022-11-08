@@ -67,12 +67,12 @@ This is the simple query passed to MongoDB:
             "knnBeta": {
                 "vector": <geneated query vector>,
                 "path": "docVector",
-                "k": 150   /* Number of neareast neighbors (nn) to return */
+                "k": 150  // Number of neareast neighbors (nn) to return 
             }
         }
     },
     {
-        "$limit": 1     // Let's assume the first result is correct :-).
+        "$limit": 1      // Let's assume the first result is correct :-).
     }
 ]
 ```
