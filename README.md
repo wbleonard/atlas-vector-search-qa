@@ -50,4 +50,31 @@ Atlas Search's Answer:
 ----------------------
 In 1965, Turner Broadcasting System was founded by Ted Turner and based in Atlanta, Georgia. 
 ```
+Try other questions, such as:
 
+    "Who did Discovery acquire?"
+    "When was Warner Bros. founded?"
+    "Who founded TBS?"
+    "Who did Warner purchase in 1982?"
+
+# The Search Query
+This is the simple query passed to MongoDB:
+
+```json
+[
+    {
+        "$search": {
+            "knnBeta": {
+                "vector": <geneated query vector>,
+                "path": "docVector",
+                "k": 150   // Number of neareast neighbors (nn) to return 
+            }
+        }
+    },
+    {
+        "$limit": 1     // Let's assume the first result is correct :-).
+    }
+]
+```
+
+The knnBeta operator uses the [Hierarchical Navigable Small Worlds](https://arxiv.org/abs/1603.09320) algorithm to perform semantic search. You can use Atlas Search support for kNN query to search similar to a selected product, search for images, etc.
